@@ -1,0 +1,95 @@
+/* Tipografías */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Clase para el color propio de SIMAN en Header*/
+.bg-siman {
+  background-color: rgb(168, 51, 56);
+}
+
+/* Estilos del nav y los links */
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #050505 !important;
+}
+
+.nav-link {
+  position: relative;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Estilos de la imagen de fondo */
+.hero {
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+.hero {
+  background-image: url('./assets/hero.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 40vh; /* para pantallas chicas */
+  height: 92vh;      /* por defecto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+
+/* Estilos del footer */
+footer {
+font-size: 0.9rem;
+}
+
+footer .container {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand img {
+  vertical-align: middle;
+}
+
+/*Clase para color del footer*/
+.bg-siman-footer {
+    background-color: #f1f1f1;
+}
+
