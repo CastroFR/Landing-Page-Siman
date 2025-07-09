@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Siman El Salvador - Sucursales</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!-- Encabezado -->
   <header class="bg-siman text-white py-3">
     <div class="container text-center">
-      <h1 class="display-1">SIMAN</h1>
+      <h1 class="display-1 typewriter">SIMAN</h1>
       <h1 class="display-5">Sucursales</h1>
       <p class="lead">Encuentra la tienda Siman más cercana a ti.</p>
     </div>
@@ -23,7 +27,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img class="me-2" src="./assets/logo-siman.png" alt="Logo Siman" height="90px" />
+        <img class="me-2" src="./assets/logo-siman.png" alt="Logo Siman" height="65rem" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -45,98 +49,168 @@
       <p class="lead">Visítanos en toda El Salvador</p>
     </div>
   </section>
-
   <!-- Sucursales -->
   <section class="container my-5">
-    <h2 class="display-5 text-center mb-4">Tiendas Principales</h2>
+    <h2 class="display-5 text-center mb-4">Nuestras Sucursales</h2>
     <div class="row">
-      <div class="col-md-6">
-        <ul class="list-group mb-4">
-          <li class="list-group-item">🛒 Siman Metrocentro - San Salvador</li>
-          <li class="list-group-item">🛍️ Siman Galerías</li>
-          <li class="list-group-item">🏬 Siman Multiplaza</li>
-          <li class="list-group-item">🛒 Siman Santa Ana</li>
-          <li class="list-group-item">🏬 Siman San Miguel</li>
-        </ul>
+      <div class="col-lg-6 mb-4">
+        <div id="carouselSucursales" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Sucursal 1 -->
+            <div class="carousel-item active">
+              <div class="card mx-auto" style="max-width: 20rem;">
+                <img src="assets/sucursal1.png" class="card-img-top" alt="Metrocentro">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-1 fw-bold">Siman Metrocentro</h5>
+                  <p class="card-text text-muted">Ubicado en el corazón de San Salvador, ideal para tus compras diarias.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sucursal 2 -->
+            <div class="carousel-item">
+              <div class="card mx-auto" style="max-width: 20rem;">
+                <img src="assets/sucursal2.png" class="card-img-top" alt="Multiplaza">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-1 fw-bold">Siman Multiplaza</h5>
+                  <p class="card-text text-muted">Moda y tecnología reunidas en un solo lugar premium.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sucursal 3 -->
+            <div class="carousel-item">
+              <div class="card mx-auto" style="max-width: 20rem;">
+                <img src="assets/sucursal3.png" class="card-img-top" alt="Galerías">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-1 fw-bold">Siman Galerías</h5>
+                  <p class="card-text text-muted">Conecta con las mejores marcas y la moda de temporada.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sucursal 4 -->
+            <div class="carousel-item">
+              <div class="card mx-auto" style="max-width: 20rem;">
+                <img src="assets/sucursal4.png" class="card-img-top" alt="Galerías">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-1 fw-bold">Siman Santa Ana</h5>
+                  <p class="card-text text-muted">Mantente al tanto de las tendencias y novedades.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sucursal 5 -->
+            <div class="carousel-item">
+              <div class="card mx-auto" style="max-width: 20rem;">
+                <img src="assets/sucursal5.png" class="card-img-top" alt="Galerías">
+                <div class="card-body text-center">
+                  <h5 class="card-title mb-1 fw-bold">Siman San Miguel</h5>
+                  <p class="card-text text-muted">Sumergete con las mejores marcas y la moda de temporada.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselSucursales" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselSucursales" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+
+
       </div>
-      <div class="col-md-6">
+
+
+      <div class="col-lg-6">
         <div class="ratio ratio-4x3">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.9296242412447!2d-89.2332456!3d13.7043127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330d02b50fcf5%3A0x6342d00f08a63e3e!2sAlmacenes%20Siman%20Multiplaza!5e0!3m2!1ses!2ssv!4v1629564698336!5m2!1ses!2ssv"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7752.4338171679055!2d-89.21990572229002!3d13.705308700000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f63306062d87639%3A0x55ab0139f4a396d1!2sAlmacenes%20SIMAN%20%E2%80%A2%20Metrocentro%20San%20Salvador!5e0!3m2!1ses!2ssv!4v1752034679282!5m2!1ses!2ssv"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-siman-footer text-black text-center py-3">
-    <!-- [Mismo contenido del footer que index.html] -->
-  </footer><!-- Footer -->
-  <footer class="bg-siman-footer text-black text-center py-3">
+  <footer class="bg-siman-footer text-black pt-5">
+    <div class="container">
+      <div class="row text-start">
 
-  <!-- Footer <footer class="bg-light pt-4"> -->
-    
-        <div class="container">
-            <section class="row">
-                <article class="col-lg-4 col-md-4 col-sm-12">
-                    <h5>SIMAN CORPORATIVO</h5>
-                    <ul class="list-unstyled"> <!--Saca los circulos de la lista -->
-                        <li><a href="#">Quiénes Somos</a></li>
-                        <li><a href="#">Visión y Misión</a></li>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Sucursales</a></li>
-                        <li><a href="#">Servicios</a></li>
-                    </ul>
-
-                </article>
-
-                <article class="col-lg-4 col-md-4 col-sm-12">
-                    <h5>PROGRAMAS</h5>
-                    <ul class="list-unstyled"> <!--Saca los circulos de la lista -->
-                        <li><a href="#">Monedero</a></li>
-                        <li><a href="#">Certificados de Regalo</a></li>
-                        <li><a href="#">Garantías</a></li>
-                        <li><a href="#">Siman PRO</a></li>
-                        <li><a href="#">Credisiman</a></li>
-                    </ul>
-
-                </article>
-
-                <article class="col-lg-4 col-md-4 col-sm-12">
-                    <h5>SERVICIO AL CLIENTE</h5>
-                    <ul class="list-unstyled"> <!--Saca los circulos de la lista -->
-                        <li><a href="#">Preguntas Frecuentes</a></li>
-                        <li><a href="#">Política de devoluciones</a></li>
-                        <li><a href="#">Contáctenos</a></li>
-                        <li><a href="#">Seguridad del sitio</a></li>
-                        <li><a href="#">Política de Privacidad</a></li>
-                    </ul>
-
-                </article>
-
-            </section>
-            <hr>
-            <section class="row">
-                <article class="text-center small pb-3">
-                    <p class="mb-0">© 2025 Siman El Salvador.</p>
-                    <p class="mb-0">Todos los derechos reservados.</p>
-                    <p>
-                        <a href="#">Español</a> |
-                        <a href="#">USD</a> |
-                        <a href="#"><i class="bi bi-facebook"></i></a> |
-                        <a href="#"><i class="bi bi-instagram"></i></a> |
-                        <a href="#"><i class="bi bi-twitter-x"></i></a> |
-                        <a href="#"><i class="bi bi-tiktok"></i></a>
-                    </p>
-                </article>
-            </section>
-
+        <!-- Columna 1 -->
+        <div class="col-lg-4 col-md-4 col-sm-12 border-end mb-4">
+          <h6 class="fw-bold">SIMAN CORPORATIVO</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Quiénes Somos</a></li>
+            <li><a href="#">Visión y Misión</a></li>
+            <li><a href="#">Historia</a></li>
+            <li><a href="#">Sucursales</a></li>
+            <li><a href="#">Servicios</a></li>
+          </ul>
         </div>
-    </footer>
+
+        <!-- Columna 2 -->
+        <div class="col-lg-4 col-md-4 col-sm-12 border-end mb-4">
+          <h6 class="fw-bold">PROGRAMAS</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Monedero</a></li>
+            <li><a href="#">Certificados de Regalo</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Siman PRO</a></li>
+            <li><a href="#">Credisiman</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Vende en Marketplace</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3 -->
+        <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
+          <h6 class="fw-bold">SERVICIO AL CLIENTE</h6>
+          <ul class="list-unstyled">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Política de devoluciones</a></li>
+            <li><a href="#">Contáctenos</a></li>
+            <li><a href="#">Seguridad del sitio</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Condiciones ofertas</a></li>
+            <li><a href="#">Derecho de Retracto</a></li>
+            <li><a href="#">Condiciones de uso</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Línea horizontal -->
+      <hr>
+
+      <!-- Legal y redes -->
+      <div class="row">
+        <div class="col text-center small pb-3">
+          <p class="mb-0">© 2025 Almacenes Siman El Salvador. Todos los derechos reservados.</p>
+          <p class="mb-1">
+            <a href="#">Español</a> |
+            <a href="#">USD</a> |
+            <a href="https://www.facebook.com/simanelsalvador"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/almacenessiman_sv/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/user/SimanElSalvador/"><i class="bi bi-youtube"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

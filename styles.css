@@ -2,9 +2,10 @@
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
+  background-color: #f8f9fa;
 }
 
-h1, h2, h3 {
+h1,h2,h3 {
   font-family: 'Playfair Display', serif;
 }
 
@@ -13,7 +14,39 @@ h1, h2, h3 {
   background-color: rgb(168, 51, 56);
 }
 
+/*Animacion de texto - Header*/
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white; /* Cursor */
+  width: 0ch;
+  animation: typing 2s steps(5) forwards, blink 0.7s step-end infinite;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 5ch; /* Número de caracteres: "SIMAN" = 5 */
+  }
+}
+
+/* Cursor parpadeante */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
 /* Estilos del nav y los links */
+.navbar-brand img {
+  vertical-align: middle;
+}
+
 .navbar-nav .nav-link {
   font-weight: bold;
   color: #fff !important;
@@ -48,7 +81,7 @@ h1, h2, h3 {
 /* Estilos de la imagen de fondo */
 .hero {
   color: #fff;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 .hero {
@@ -56,8 +89,10 @@ h1, h2, h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 40vh; /* para pantallas chicas */
-  height: 92vh;      /* por defecto */
+  min-height: 40vh;
+  /* para pantallas chicas */
+  height: 92vh;
+  /* por defecto */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,22 +109,130 @@ h1, h2, h3 {
   }
 }
 
-
-/* Estilos del footer */
-footer {
-font-size: 0.9rem;
+/* Botón parpadeante */
+.blink-btn {
+  animation: blink-glow 1.2s ease-in-out infinite;
 }
 
-footer .container {
-  font-family:Arial, Helvetica, sans-serif;
+/* Animación */
+@keyframes blink-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(168, 51, 56, 0.8);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 2px rgba(168, 51, 56, 0.2);
+    opacity: 0.5;
+  }
 }
 
-.navbar-brand img {
-  vertical-align: middle;
+
+/* Estilos de los botones - Promociones */
+.btn-siman {
+  background-color: rgb(168, 51, 56);
+  color: #fff;
+  font-weight: bold;
+  border: none;
 }
 
-/*Clase para color del footer*/
-.bg-siman-footer {
+.btn-siman:hover {
+  background-color: #861c21;
+  color: #fff;
+}
+
+/* Estilos de las tarjetas - Promociones*/
+.card {
+  border: none;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación constante en cards */
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.card-animated {
+  animation: floatCard 3s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Detiene la animación y aplica zoom en hover */
+.card-animated:hover {
+  animation-play-state: paused;
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.bg-siman {
+  background-color: rgb(168, 51, 56);
+}
+
+/* Lista estilizacion - SUCURSALES*/
+.list-group-item-action:hover {
+  background-color: #f8d7da; /* Un rosa claro como referencia a tu rojo institucional */
+  cursor: pointer;
+}
+
+/*Estilo de carrusel - SUCURSALES*/
+.carousel-item {
+  padding: 1rem 0;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/*Estilo de retroceder y avanzar, carrusel - SUCURSALES*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgb(168, 51, 56); /* rojo institucional */
+  background-size: 60% 60%;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+  /* Estilos del footer */
+  footer {
+    font-size: 0.9rem;
+  }
+  
+  footer .container {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  @media (max-width: 767px) {
+    .border-end {
+      border-right: none !important;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+  
+  
+  /*Clase para color del footer*/
+  .bg-siman-footer {
     background-color: #f1f1f1;
-}
-
+  }
